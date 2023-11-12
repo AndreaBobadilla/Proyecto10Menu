@@ -1,0 +1,111 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    min-height: 100vh;
+    min-width: 100vw;
+    background: linear-gradient(180deg, rgba(223,248,51,1) 26%, rgba(255,75,229,1) 85%);
+}
+
+@font-face {
+    font-family: pagPrinci;
+    src: url(../letraboni.ttf);
+}
+
+nav{
+    font-family: pagPrinci;
+}
+
+.logo{
+    max-width: 11rem;
+    margin-left: 5px;
+}
+
+header{
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem;
+    background-color:#ffff89;
+    border: double 8px #c06500;
+}
+
+.listaMenu{
+    list-style-type: none;
+    display: flex;
+    gap: 1rem;
+}
+
+.listaMenu li a{
+    text-decoration: none;
+    color: #8d4925;
+    font-size: 27px;
+    margin-right: 12px;
+}
+
+.abrirMenu,
+.cerrarMenu{
+    display: none;
+}
+
+.img {
+    margin-top: 30px;
+    width: 400px;
+}
+
+@media screen and (max-width: 800px){
+
+    .abrirMenu,
+    .cerrarMenu{
+        display: block;
+        border: none;
+        font-size: 2.5rem;
+        cursor: pointer;
+        background-color: transparent;
+        color: black;
+    }
+
+    .menuPrincipal{
+        max-height: max-content;
+        opacity: 0;
+        visibility: hidden;
+        display: flex;
+        flex-direction: column;
+        align-items: end;
+        gap: 2rem;
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        background-color: #ffff89;
+        padding: 1rem;
+        border: double 8px #c06500;
+    }
+
+    .menuPrincipal.visible{
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .listaMenu{
+        flex-direction: column;
+        align-items: end;
+    }
+
+    .listaMenu li a{
+        color: #8d4925;
+    }
+
+    .img {
+        margin-top: 40px;
+        width: 380px;
+    }
+
+    
+
+}
+
